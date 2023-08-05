@@ -22,14 +22,13 @@ namespace HappyTickets
             int g = a + b + c;
             int h = f + d + e;
             int i = g - h;
-            int j = h - g;
-            if ((i == 1) || (j == 1))
+            if (i == 0) 
             {
-                return "This ticket is happy";
+                return "Yes";
             }
             else
             {
-                return "This ticket is unhappy";
+                return "No";
             }
         }
         static string HappyTicket0(string ticket)
@@ -45,20 +44,20 @@ namespace HappyTickets
             int g1 = a1 + b1 + c1;
             int h1 = f1 + d1 + e1;
             int i1 = g1 - h1;
-            int j1 = h1 - g1;
-            if ((i1 == 1) || (j1 == 1))
+        
+            if (i1 == 0) 
             {
-                return "This ticket is happy";
+                return "Yes";
             }
             else
             {
-                return "This ticket is unhappy";
+                return "No";
             }
         }
         static void Main(string[] args)
         {
-            string ticket = HappyTicket("666664");
-            string ticket0 = HappyTicket0("666664");
+            string ticket = HappyTicket("172542");
+            string ticket0 = HappyTicket0("172542");
             Console.WriteLine(ticket);
             Console.WriteLine(ticket0);
             Console.ReadKey();
